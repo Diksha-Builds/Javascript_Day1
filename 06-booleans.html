@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Booleans</title>
+</head>
+<body>
+    <script>
+        true
+        false
+
+        /*
+        console.log(3 > 5);
+
+        console.log(5 == '5.00');   // == converts both the values into the same type
+
+        if(false)
+        {
+            console.log('Hello');
+        }
+        else
+        {
+            console.log('else');
+        }
+
+        const age = 15;
+
+        if(age >= 16)
+        {
+            console.log('You can drive');
+        }
+        else if(age >= 14)
+        {
+            console.log('Almost there');
+        }
+        else
+        {
+            console.log('You cannot drive');
+        }
+
+        console.log(true && true);
+
+        console.log(true || false);
+
+        console.log(!true);
+        */
+
+        // Falsy values -> 0 '' NaN undefined null
+        // Any value not on this list is Truthy
+
+        /*
+        if(5)
+        {
+            console.log('truthy');
+        }
+
+        const cartQuantity = 5;
+
+        if(cartQuantity) // cartQuantity > 0
+        {
+            console.log("Cart has products");
+        }
+
+        console.log(!0); // true
+        console.log('text' / 5); // NaN -> not a number
+
+        let variable1;
+        console.log(variable1); // undefined
+        */
+
+        const result = true ? 'truthy' : 'falsy';
+        console.log(result);
+
+        // && -> guard operator
+        const message = false && 'hello'; // short circuit evaluation because it doesnt check the right side of && because the first value is false already
+        console.log(message);
+
+        const currency = 'EUR' || 'USD'; // short circuit evaluation because the left side is true already so it doesnt check the left side
+        console.log(currency);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Objects</title>
+</head>
+<body>
+    <script>
+        /*
+        const product = {
+            name : 'socks',
+            price : 1090
+        };
+        console.log(product);
+        console.log(product.name);
+        console.log(product.price);
+
+        product.name = 'cotton socks';
+        console.log(product);
+
+        product.newProperty = true;
+        console.log(product);
+
+        delete product.newProperty;
+        console.log(product);
+        */
+
+        /*
+        const product2 = {
+            name : 'shirt',
+            'delivery-time' : '1 day',
+
+            rating : {
+                stars : 4.5,
+                count : 87
+            },
+
+            fun : function function1()
+            {
+                console.log('Function inside object');
+            }
+        };
+
+        console.log(product2);
+        console.log(product2.name);
+        console.log(product2['name']);
+        
+        //console.log(product2.delivery-time);    // Gives an error because it considers the - sign as minus
+        console.log(product2['delivery-time']); // Thats when we should use the [] to access the elements inside of an object
+    
+        console.log(product2.rating.count);
+
+        product2.fun();
+
+        console.log(typeof console);    // object
+        console.log(typeof console.log);    // function
+
+        console.log(JSON.stringify(product2));  // JS object conversion to JS. JSON does not support functions
+
+        // JSON conversion to JS object
+        jsonString = JSON.stringify(product2);
+        console.log(JSON.parse(jsonString));
+        */
+
+        console.log('hello'.length);
+        console.log('hello'.toUpperCase);
+
+        const object1 = {   // reference
+            message : 'hello'
+        };
+
+        const object2 = object1;    // copy by reference
+
+        object1.message = 'Good Job!';
+        console.log(object1);   // even though the object is const, the message gets changed because its just a reference and reference doesnt stop you from making changes inside the {} 
+        console.log(object2);
+
+        const object3 = {
+            message : 'Good Job!'
+        };
+
+        console.log(object3 === object2); // false -> compares the references, not the values inside
+
+        console.log(object2 === object1); // true -> because they have the same reference
+
+        const object4 = {
+            message : 'Good Job!',
+            price : 799
+        };
+
+        // both the below lines are same
+        // const message = object4.message;
+        const {message, price} = object4;
+        console.log(message);
+        console.log(price);
+
+        const object5 = {
+            //message : message  // message -> key : message -> value (the above variable)
+            message, // same as above line
+            
+            //method : function function1()
+            //{
+            //    console.log('Method');
+            //}
+
+            method() // same as above
+            {
+                console.log('Method');
+            }
+        };
+
+        console.log(object5);
+        object5.method();
+        
+    </script>
+</body>
+</html>
